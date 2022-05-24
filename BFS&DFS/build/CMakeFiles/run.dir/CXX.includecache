@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/codeTest/BFS/include/Graph.h
+iostream
+-
+string
+-
+queue
+-
+list
+-
+
+D:/codeTest/BFS/src/Graph.cpp
+../include/Graph.h
+D:/codeTest/BFS/include/Graph.h
+iostream
+-
+

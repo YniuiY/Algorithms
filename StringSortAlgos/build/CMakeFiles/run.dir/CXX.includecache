@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/LSD.h
+iostream
+-
+string
+-
+vector
+-
+
+../include/MSD.h
+iostream
+-
+string
+-
+vector
+-
+
+D:/codeTest/StringSortAlgos/src/LSD.cpp
+LSD.h
+D:/codeTest/StringSortAlgos/src/LSD.h
+
+D:/codeTest/StringSortAlgos/src/MSD.cpp
+MSD.h
+D:/codeTest/StringSortAlgos/src/MSD.h
+
+D:/codeTest/StringSortAlgos/src/main.cpp
+LSD.h
+D:/codeTest/StringSortAlgos/src/LSD.h
+MSD.h
+D:/codeTest/StringSortAlgos/src/MSD.h
+

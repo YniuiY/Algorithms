@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/MyHeap.h
+vector
+-
+iostream
+-
+random
+-
+stack
+-
+
+../include/SortAlgos.h
+iostream
+-
+vector
+-
+string
+-
+random
+-
+
+D:/codeTest/SortAlgos/src/MyHeap.cpp
+MyHeap.h
+D:/codeTest/SortAlgos/src/MyHeap.h
+
+D:/codeTest/SortAlgos/src/main.cpp
+SortAlgos.h
+D:/codeTest/SortAlgos/src/SortAlgos.h
+MyHeap.h
+D:/codeTest/SortAlgos/src/MyHeap.h
+chrono
+-
+

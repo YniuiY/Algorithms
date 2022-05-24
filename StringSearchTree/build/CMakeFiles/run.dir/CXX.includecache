@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/StringSearchTree.h
+iostream
+-
+string
+-
+vector
+-
+
+D:/codeTest/StringSearchTree/src/StringSearchTree.cpp
+StringSearchTree.h
+D:/codeTest/StringSearchTree/src/StringSearchTree.h
+
+D:/codeTest/StringSearchTree/src/main.cpp
+StringSearchTree.h
+D:/codeTest/StringSearchTree/src/StringSearchTree.h
+stdio.h
+-
+

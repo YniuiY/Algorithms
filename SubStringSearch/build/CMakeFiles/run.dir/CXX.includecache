@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/SubStringSearch.h
+iostream
+-
+string
+-
+vector
+-
+
+D:/codeTest/SubStringSearch/src/SubStringSearch.cpp
+SubStringSearch.h
+D:/codeTest/SubStringSearch/src/SubStringSearch.h
+
