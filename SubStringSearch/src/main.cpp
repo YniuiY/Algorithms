@@ -3,14 +3,16 @@
 
 int main()
 {
-    SubStringSearch sss;
+    // SubStringSearch sss;
     cout<<"Input string s:";
     string s;
     cin>>s;
     cout<<"\nInput string pattern:";
     string pattern;
     cin>>pattern;
-    cout<<"\nmatch number:"<<sss.search(s, pattern)<<endl;
+    RabinKarp rk(pattern);
+    // cout<<"\nmatch number:"<<sss.search(s, pattern)<<endl;
+    cout<<"\nmatch number:"<<rk.search(s)<<endl;
 
     return 0;
 }
