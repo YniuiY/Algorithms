@@ -118,8 +118,15 @@ void SortAlgos::quickSort(int startPos, int endPos)
 
 }
 
-void SortAlgos::quick3WaySorty(int lo, int hi)
+/**
+ * 三向切分的快速排序算法
+ * 从待排序容器中找一个随机元素，
+ * 以它为标准（切分）容器，小于它的放到容器前面，大于的放到容器后面，中间的元素等于它
+ * 然后递归的切分大于和小于的两部分直到容器长度小于指定长度
+ */
+void SortAlgos::quick3WaySort(int lo, int hi)
 {
+    if(hi <= lo) return;    //结束递归
     int le = lo, ri = hi;
     int i = lo + 1;
     int v = nums[lo];
@@ -141,8 +148,8 @@ void SortAlgos::quick3WaySorty(int lo, int hi)
     }
 
     /* 递归的切分数组，分成小数组再切分，长度2，3的小数组会有序，最后合并成有序的大数组 */
-    sort(lo, le-1);
-    sort(ri+1, hi);
+    quick3WaySort(lo, le-1);
+    quick3WaySort(ri+1, hi);
 }
 
 // 归并排序
