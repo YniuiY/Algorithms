@@ -10,6 +10,6 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 
 aux_source_directory(./src SRCS)
 
-set(RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR})
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR})
 
 add_executable(run ${SRCS})

@@ -1,3 +1,0 @@
-D:/codeTest/QuickSort/build/CMakeFiles/run.dir
-D:/codeTest/QuickSort/build/CMakeFiles/edit_cache.dir
-D:/codeTest/QuickSort/build/CMakeFiles/rebuild_cache.dir
