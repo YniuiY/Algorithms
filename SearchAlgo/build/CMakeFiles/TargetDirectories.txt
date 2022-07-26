@@ -1,3 +1,0 @@
-D:/codeTest/SearchAlgo/build/CMakeFiles/run.dir
-D:/codeTest/SearchAlgo/build/CMakeFiles/edit_cache.dir
-D:/codeTest/SearchAlgo/build/CMakeFiles/rebuild_cache.dir

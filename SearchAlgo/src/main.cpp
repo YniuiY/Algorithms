@@ -1,13 +1,15 @@
 #include "SymbolTable.h"
 #include "BST.h"
 #include "RBT.h"
+#include "HashTable.h"
 using namespace std;
 
 int main()
 {
     // SymbolTable<string, int> st(10);
     // BinarySearchTree<string, int> bst;
-    RedBlackTree<string, int> rbt;
+    // RedBlackTree<string, int> rbt;
+    HashTable<string, int> ht(97);
     int N = 0;
     string k;
     int v;
@@ -21,8 +23,15 @@ int main()
         cout<<"Value: ";
         cin>>v;
         // bst.put(k, v);
-        rbt.put(k, v);
+        // rbt.put(k, v);
+        ht.put(k, v);
     }
+
+    string s = "yangdi";
+    string s1 = "xingmeiling1";
+    ht.put(s, 000);
+    cout<<s<<"- value is:"<<ht.get(s)<<endl;
+    cout<<s1<<"- value is:"<<ht.get(s1)<<endl;
 
     // cout<<"BST Size: "<<bst.size()<<endl<<endl;
 
@@ -39,7 +48,7 @@ int main()
     // }
 
     // bst.show();
-    rbt.show();
+    // rbt.show();
     // cout<<"Min: "<< bst.min()<<endl;
     // bst.deletaMin();
     // cout<<"deleta Key:";

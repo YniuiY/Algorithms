@@ -156,7 +156,7 @@ Value RedBlackTree<Key, Value>::get(Node* root, Key k)
 template<class Key, class Value>
 int RedBlackTree<Key, Value>::size()
 {
-    size(root);
+    return size(root);
 }
 
 template<class Key, class Value>
