@@ -24,7 +24,7 @@ int main()
         for(int j = 0; j < 3; j++)
         {
             //确保dp数组计算过程中数组下标不越界
-            if(i >= coin[j] && dp[i - coin[j] != INT32_MAX])
+            if(i >= coin[j] && dp[i - coin[j]] != INT32_MA)
             {
                 //转移方程
                 dp[i] = min(dp[i - coin[j]]+1, dp[i]);
