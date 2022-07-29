@@ -9,4 +9,4 @@ include_directories(include)
 
 aux_source_directory(src SRCS)
 
-add_executable(run ${SRCS} src/Digraph.cpp include/Digraph.h)
+add_executable(run ${SRCS} src/Digraph.cpp include/Digraph.h src/SymbolDigraph.cpp include/SymbolDigraph.h src/BFS.cpp include/BFS.h src/DFS.cpp include/DFS.h)

@@ -12,11 +12,12 @@
 
 class Digraph{
 private:
-    int V;
-    int E;
+    int V = 0;
+    int E = 0;
     std::vector<std::list<int>> adj;
 
 public:
+    Digraph() = default;
     Digraph(int v);
     ~Digraph()=default;
     int Vertex();
