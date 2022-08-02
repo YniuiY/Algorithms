@@ -11,7 +11,7 @@
 #include "SymbolDigraph.h"
 using namespace std;
 
-bool* DFS::marked1 = nullptr;
+//bool* DFS::marked1 = nullptr;
 
 DFS::DFS(Digraph dg, int s):DG(dg) ,S(s)
 {
@@ -31,18 +31,20 @@ DFS::~DFS()
     delete[] edgeTo;
 }
 
-void DFS::dfs(Digraph DG, int s)
+void DFS::dfs(Digraph DG, int v)
 {
-    marked1 = new bool [DG.Vertex()];
-    marked1[s] = true;
+    pre.push(v);
+    marked[v] = true;
 
-    for(auto v: DG.adjs(s))
+    for(auto w: DG.adjs(v))
     {
-        if(!marked1[v])
+        if(!marked[w])
         {
-            dfs(DG, v);
+            dfs(DG, w);
         }
     }
+    post.push(v);
+    reversePost.push(v);
 }
 
 void DFS::dfs(int s)
@@ -77,4 +79,19 @@ std::vector<int> DFS::pathTo(int destVertex)
     path.push_back(S);
     reverse(path.begin(), path.end());
     return path;
+}
+
+std::queue<int> DFS::preNode()
+{
+    return pre;
+}
+
+queue<int> DFS::postNode()
+{
+    return post;
+}
+
+stack<int> DFS::reversePostNode()
+{
+    return reversePost;
 }

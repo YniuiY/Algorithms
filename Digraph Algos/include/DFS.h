@@ -6,16 +6,20 @@
 #define DIGRAPHALGO_DFS_H
 #include "SymbolDigraph.h"
 #include "Digraph.h"
-
+#include <queue>
+#include <stack>
+using namespace std;
 
 class DFS
 {
 private:
     Digraph DG;
     SymbolDigraph SDG;
+    queue<int> pre;
+    queue<int> post;
+    stack<int> reversePost;
     bool* marked = nullptr;
     int* edgeTo = nullptr;
-    static bool* marked1;
     int S = 0;
 public:
     DFS() = default;
@@ -23,10 +27,13 @@ public:
     DFS(SymbolDigraph sdg, int s);
     ~DFS();
 
-    static void dfs(Digraph, int);
+    void dfs(Digraph, int);
     void dfs(int);
     bool isMarked(int v);
     std::vector<int> pathTo(int destVertex);
+    std::queue<int> preNode();
+    queue<int> postNode();
+    stack<int> reversePostNode();
 };
 
 
