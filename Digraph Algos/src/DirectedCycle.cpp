@@ -10,6 +10,10 @@ DirectedCycle::DirectedCycle(const Digraph &g):G(g)
     onStack = new bool [G.Vertex()];
     marked = new bool [G.Vertex()];
     edgeTo = new int [G.Vertex()];
+    //cout << sizeof(onStack) << " " << sizeof(marked) << " " << sizeof(edgeTo) << endl;
+    memset(onStack, 0, sizeof(bool) * G.Vertex());
+    memset(marked, 0, sizeof(bool) * G.Vertex());
+    memset(edgeTo, 0, sizeof(int) * G.Vertex());
 
     for(int v = 0; v < G.Vertex(); v++)
     {

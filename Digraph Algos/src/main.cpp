@@ -3,6 +3,7 @@
 //
 
 #include "Digraph.h"
+#include "Graph.h"
 #include "SymbolDigraph.h"
 #include "BFS.h"
 #include "DirectedCycle.h"
@@ -10,7 +11,7 @@ using namespace std;
 
 int main()
 {
-#if 1
+#if 0
     Digraph diaGraph(4);
 
     int v = 0, w = 0;
@@ -44,5 +45,24 @@ int main()
     bfs.bfs(SD,0);
 
 #endif
+
+#if 1
+    Graph G(4, 4);
+    int v = 0;
+    int w = 0;
+
+    for (int i = 0; i < 4; i++)
+    {
+        cout << "From: ";
+        cin >> v;
+        cout << "\nTo: ";
+        cin >> w;
+        cout << endl;
+        G.addEdge(v, w);
+    }
+    BFS bfs(G);
+    bfs.bfs(G,0);
+
+#endif 
     return 0;
 }

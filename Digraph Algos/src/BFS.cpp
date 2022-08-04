@@ -10,16 +10,30 @@
 #include "SymbolDigraph.h"
 using namespace std;
 
+void BFS::init()
+{
+    marked = new bool[VertexNum];
+    edgeTo = new int[VertexNum];
+    memset(marked, 0, sizeof(bool) * VertexNum);
+    memset(edgeTo, 0, sizeof(int) * VertexNum);
+}
+
 BFS::BFS(const Digraph& dg):DG(dg),s(0)
 {
-    marked = new bool[DG.Vertex()];
-    edgeTo = new int[DG.Vertex()];
+    VertexNum = DG.Vertex();
+    init();
+}
+
+BFS::BFS(const Graph& g) :G(g), s(0)
+{
+    VertexNum = G.Vertex();
+    init();
 }
 
 BFS::BFS(const SymbolDigraph& sd):SD(sd),s(0)
 {
-    marked = new bool[SD.DG().Vertex()];
-    edgeTo = new int[SD.DG().Vertex()];
+    VertexNum = SD.DG().Vertex();
+    init();
 }
 
 BFS::~BFS()
@@ -68,6 +82,31 @@ void BFS::bfs(Digraph DG, int root)
                 q.push(a);
                 marked[a] = true;
                 edgeTo[a] = v;
+            }
+        }
+
+    }
+}
+
+void BFS::bfs(Graph G, int root)
+{
+    queue<int> q;
+    q.push(root);
+    marked[root] = true;
+    cout << root << " ";
+
+    while (!q.empty())
+    {
+        int v = q.front();
+        q.pop();
+        for (auto w : G.adjs(v))
+        {
+            if (!marked[w])
+            {
+                q.push(w);
+                marked[w] = true;
+                edgeTo[w] = v;
+                cout << w << " ";
             }
         }
 
