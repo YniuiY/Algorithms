@@ -15,6 +15,7 @@ Digraph::Digraph(int v):V(v),E(0)
 
 void Digraph::addEdge(int v, int w)
 {
+    cout << "add edge from: " << v << "-> to: " << w << std::endl;
     adj[v].push_back(w);
     E++;
 }

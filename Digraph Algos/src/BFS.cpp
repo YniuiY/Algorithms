@@ -5,6 +5,7 @@
 #include <vector>
 #include <queue>
 #include <algorithm>
+#include <string.h>
 #include "BFS.h"
 #include "Digraph.h"
 #include "SymbolDigraph.h"

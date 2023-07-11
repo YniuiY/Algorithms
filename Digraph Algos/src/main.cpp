@@ -11,12 +11,17 @@ using namespace std;
 
 int main()
 {
-#if 0
-    Digraph diaGraph(4);
+#if 1
+    int vertex, edge;
+    cout << "diagraph has vertex: ";
+    cin >> vertex;
+    cout <<"has edge: ";
+    cin >> edge;
+    Digraph diaGraph(vertex);
 
     int v = 0, w = 0;
-    cout<<"Input vertex\n";
-    for(int i = 0; i < 4; i++)
+    cout<<"Input edge\n";
+    for(int i = 0; i < edge; i++)
     {
         cout<<"From:";
         cin>>v;
@@ -25,6 +30,7 @@ int main()
         diaGraph.addEdge(v, w);
         cout<<"\n";
     }
+    cout << "diagraph constract over\n";
     DirectedCycle dc(diaGraph);
     cout<<"Graph has cycle: "<<dc.hasCycle()<<endl;
     if(dc.hasCycle())
@@ -46,7 +52,7 @@ int main()
 
 #endif
 
-#if 1
+#if 0
     Graph G(4, 4);
     int v = 0;
     int w = 0;
